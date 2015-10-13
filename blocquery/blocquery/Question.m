@@ -13,10 +13,22 @@
 
 - (instancetype) init
 {
-    self.user = [[Datasource sharedInstance].questions valueForKey:NSStringFromSelector(@selector(user))];
-    self.text = [[Datasource sharedInstance].questions valueForKey:NSStringFromSelector(@selector(text))];
+    self = [super init];
+    
+    if (self)
+    {
+        self.user = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(user))];
+        self.text = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(text))];
+    }
     
     return self;
+}
+
+- (NSArray *)availableQuestions
+{
+    NSArray *questions = [Datasource sharedInstance].questions;
+    
+    return questions;
 }
 
 @end

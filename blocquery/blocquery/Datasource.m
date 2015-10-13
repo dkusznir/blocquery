@@ -51,8 +51,8 @@
         [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
             if (!error)
             {
-                self.existingQuestions = objects;
-                NSLog(@"%@", self.existingQuestions);
+                self.questions = objects;
+                NSLog(@"%@", self.questions);
                 
             }
             

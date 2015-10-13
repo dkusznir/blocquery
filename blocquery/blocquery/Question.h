@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSArray *answers;
 
+- (NSArray *)availableQuestions;
+
 @end

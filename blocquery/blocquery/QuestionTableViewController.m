@@ -11,6 +11,7 @@
 #import "Datasource.h"
 #import "User.h"
 #import "Question.h"
+#import "QuestionCellTableViewCell.h"
 
 @interface QuestionTableViewController ()
 
@@ -64,29 +65,28 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
-    cell.textLabel.text = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"text"];
-
+    
+    QuestionCellTableViewCell *cell = (QuestionCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
+    cell.questionText.text = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"text"];
+    
+    cell.respondButton.tag = indexPath.row;
+    [cell.respondButton addTarget:self action:@selector(respondButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
 
 - (NSArray *)items
 {
-    __block NSArray *questions = [NSArray array];
+    Question *question = [[Question alloc] init];
+    return [question availableQuestions];
+
+}
+
+- (void)respondButtonSelected:(UIButton *)respondButton
+{
+    NSLog(@"----RESPOND SELECTED----");
     
-    if ([[NSUserDefaults standardUserDefaults] boolForKey:@"New User"] == NO)
-    {
-        questions = [Datasource sharedInstance].existingQuestions;
-        return questions;
-    }
     
-    else
-    {
-        questions = [Datasource sharedInstance].questions;
-        return questions;
-    }
-    
-    return 0;
 }
 
 - (IBAction)logOut:(id)sender
@@ -107,6 +107,15 @@
 
     LogInViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LogInView"];
     [self presentViewController:loginVC animated:YES completion:nil];
+}
+
+- (UIButton *)respondButton
+{
+    UIButton *respondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchDown];
+    [respondButton setTitle:@"Respond" forState:UIControlStateNormal];
+    
+    return respondButton;
 }
 
 /*

@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Datasource : NSObject <NSKeyedArchiverDelegate>
+@interface Datasource : NSObject
 
 + (instancetype)sharedInstance;
 
 @property (nonatomic, strong) NSArray *questions;
-@property (nonatomic, strong) NSArray *existingQuestions;
 
 @end

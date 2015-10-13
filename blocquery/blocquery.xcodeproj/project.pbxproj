@@ -35,6 +35,7 @@
 		AAE8087C1B6BE78500CBF411 /* CreateQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */; };
 		AAE8087E1B6BF51900CBF411 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037621B4EE0E1008E8786 /* Parse.framework */; };
 		AAED7DFA1B7CE45700FE355C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED7DF91B7CE45700FE355C /* Question.m */; };
+		AAED7DFD1B9F7AC200FE355C /* QuestionCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED7DFC1B9F7AC200FE355C /* QuestionCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,8 @@
 		AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQuestions.m; sourceTree = "<group>"; };
 		AAED7DF81B7CE45700FE355C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		AAED7DF91B7CE45700FE355C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		AAED7DFB1B9F7AC200FE355C /* QuestionCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCellTableViewCell.h; sourceTree = "<group>"; };
+		AAED7DFC1B9F7AC200FE355C /* QuestionCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +154,8 @@
 				AAE8086A1B59801800CBF411 /* LogInViewController.m */,
 				AAE8086F1B5D9B1100CBF411 /* QuestionTableViewController.h */,
 				AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */,
+				AAED7DFB1B9F7AC200FE355C /* QuestionCellTableViewCell.h */,
+				AAED7DFC1B9F7AC200FE355C /* QuestionCellTableViewCell.m */,
 				AAE8086C1B59A80300CBF411 /* SignUpViewController.h */,
 				AAE8086D1B59A80300CBF411 /* SignUpViewController.m */,
 				AAE808631B5976FB00CBF411 /* User.h */,
@@ -319,6 +324,7 @@
 				AAE808771B5DC3FC00CBF411 /* Datasource.m in Sources */,
 				AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */,
 				AAE808711B5D9B1100CBF411 /* QuestionTableViewController.m in Sources */,
+				AAED7DFD1B9F7AC200FE355C /* QuestionCellTableViewCell.m in Sources */,
 				AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */,
 				AAED7DFA1B7CE45700FE355C /* Question.m in Sources */,
 				AA2037411B4EE049008E8786 /* AppDelegate.m in Sources */,
