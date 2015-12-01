@@ -27,6 +27,7 @@
 		AA2037771B4EE165008E8786 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037761B4EE165008E8786 /* SystemConfiguration.framework */; };
 		AA2037791B4EE16D008E8786 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037781B4EE16D008E8786 /* libz.dylib */; };
 		AA20377B1B4EE176008E8786 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA20377A1B4EE176008E8786 /* libsqlite3.dylib */; };
+		AA2873241BCD66B20017BAFD /* RespondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2873231BCD66B20017BAFD /* RespondViewController.m */; settings = {ASSET_TAGS = (); }; };
 		AAE808651B5976FB00CBF411 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808641B5976FB00CBF411 /* User.m */; };
 		AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8086A1B59801800CBF411 /* LogInViewController.m */; };
 		AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8086D1B59A80300CBF411 /* SignUpViewController.m */; };
@@ -75,6 +76,8 @@
 		AA2037761B4EE165008E8786 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AA2037781B4EE16D008E8786 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AA20377A1B4EE176008E8786 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AA2873221BCD66B20017BAFD /* RespondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RespondViewController.h; path = ../RespondViewController.h; sourceTree = "<group>"; };
+		AA2873231BCD66B20017BAFD /* RespondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RespondViewController.m; path = ../RespondViewController.m; sourceTree = "<group>"; };
 		AAE808631B5976FB00CBF411 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		AAE808641B5976FB00CBF411 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		AAE808691B59801800CBF411 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
@@ -150,6 +153,8 @@
 				AA2037401B4EE049008E8786 /* AppDelegate.m */,
 				AA2037421B4EE049008E8786 /* ViewController.h */,
 				AA2037431B4EE049008E8786 /* ViewController.m */,
+				AA2873221BCD66B20017BAFD /* RespondViewController.h */,
+				AA2873231BCD66B20017BAFD /* RespondViewController.m */,
 				AAE808691B59801800CBF411 /* LogInViewController.h */,
 				AAE8086A1B59801800CBF411 /* LogInViewController.m */,
 				AAE8086F1B5D9B1100CBF411 /* QuestionTableViewController.h */,
@@ -324,6 +329,7 @@
 				AAE808771B5DC3FC00CBF411 /* Datasource.m in Sources */,
 				AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */,
 				AAE808711B5D9B1100CBF411 /* QuestionTableViewController.m in Sources */,
+				AA2873241BCD66B20017BAFD /* RespondViewController.m in Sources */,
 				AAED7DFD1B9F7AC200FE355C /* QuestionCellTableViewCell.m in Sources */,
 				AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */,
 				AAED7DFA1B7CE45700FE355C /* Question.m in Sources */,
@@ -407,7 +413,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -445,7 +451,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

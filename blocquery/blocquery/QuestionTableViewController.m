@@ -12,8 +12,11 @@
 #import "User.h"
 #import "Question.h"
 #import "QuestionCellTableViewCell.h"
+#import "RespondViewController.h"
 
 @interface QuestionTableViewController ()
+
+@property (nonatomic, strong) NSString *questionText;
 
 @end
 
@@ -68,9 +71,10 @@
     
     QuestionCellTableViewCell *cell = (QuestionCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
     cell.questionText.text = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"text"];
+    self.questionText = cell.questionText.text;
     
     cell.respondButton.tag = indexPath.row;
-    [cell.respondButton addTarget:self action:@selector(respondButtonSelected:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -80,13 +84,6 @@
     Question *question = [[Question alloc] init];
     return [question availableQuestions];
 
-}
-
-- (void)respondButtonSelected:(UIButton *)respondButton
-{
-    NSLog(@"----RESPOND SELECTED----");
-    
-    
 }
 
 - (IBAction)logOut:(id)sender
@@ -112,21 +109,32 @@
 - (UIButton *)respondButton
 {
     UIButton *respondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchDown];
+    [respondButton addTarget:self action:@selector(prepareForSegue:sender:) forControlEvents:UIControlEventTouchDown];
     [respondButton setTitle:@"Respond" forState:UIControlStateNormal];
+    respondButton.enabled = NO;
     
     return respondButton;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Q-A"])
+    {
+        UIButton *button = (UIButton *)sender;
+        NSInteger row = button.tag;
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
+        
+        QuestionCellTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        self.questionText = cell.questionText.text;
+        
+        RespondViewController *rvc = (RespondViewController *)segue.destinationViewController;
+        
+        rvc.text = self.questionText;
+        
+        NSLog(@"TEXT: %@", rvc.text);
+    }
+
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -162,14 +170,5 @@
 }
 */
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -64,7 +64,7 @@
              }
         }];
         
-        QuestionTableViewController *questionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Table"];
+        QuestionTableViewController *questionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionTable"];
         UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:questionVC];
         [self presentViewController:navVC animated:YES completion:nil];
     }
