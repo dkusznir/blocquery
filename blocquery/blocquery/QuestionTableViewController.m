@@ -74,7 +74,7 @@
     self.questionText = cell.questionText.text;
     
     cell.respondButton.tag = indexPath.row;
-    [cell.respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchUpInside];
+    //[cell.respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -105,7 +105,7 @@
     LogInViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LogInView"];
     [self presentViewController:loginVC animated:YES completion:nil];
 }
-
+/*
 - (UIButton *)respondButton
 {
     UIButton *respondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -121,7 +121,7 @@
     NSLog(@"Respond PRESSED");
 
 }
-
+*/
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"Q-A"])

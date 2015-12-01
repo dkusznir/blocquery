@@ -155,7 +155,6 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <action selector="respondPressed:" destination="J3C-SB-klr" eventType="touchUpInside" id="HPo-9R-G73"/>
                                                 <segue destination="Aw1-mN-XMt" kind="show" identifier="Q-A" id="NVq-CU-3cs"/>
                                             </connections>
                                         </button>
