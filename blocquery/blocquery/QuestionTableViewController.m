@@ -109,11 +109,17 @@
 - (UIButton *)respondButton
 {
     UIButton *respondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [respondButton addTarget:self action:@selector(prepareForSegue:sender:) forControlEvents:UIControlEventTouchDown];
+    [respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchDown];
     [respondButton setTitle:@"Respond" forState:UIControlStateNormal];
     respondButton.enabled = NO;
     
     return respondButton;
+}
+
+- (IBAction)respondPressed:(id)sender
+{
+    NSLog(@"Respond PRESSED");
+
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
