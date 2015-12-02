@@ -6,15 +6,15 @@
 //  Copyright © 2015 dkusznir. All rights reserved.
 //
 
-#import "RespondViewController.h"
+#import "QuestionDetailViewController.h"
 
-@interface RespondViewController ()
+@interface QuestionDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 
 @end
 
-@implementation RespondViewController
+@implementation QuestionDetailViewController
 /*
 - (id)initWithQuestion:(NSString *)question
 {

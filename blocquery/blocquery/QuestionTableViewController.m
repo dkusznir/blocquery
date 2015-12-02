@@ -12,11 +12,11 @@
 #import "User.h"
 #import "Question.h"
 #import "QuestionCellTableViewCell.h"
-#import "RespondViewController.h"
+#import "QuestionDetailViewController.h"
 
 @interface QuestionTableViewController ()
 
-@property (nonatomic, strong) NSString *questionText;
+@property (nonatomic, strong) NSString *selectedQuestionText;
 
 @end
 
@@ -71,7 +71,7 @@
     
     QuestionCellTableViewCell *cell = (QuestionCellTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
     cell.questionText.text = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"text"];
-    self.questionText = cell.questionText.text;
+    self.selectedQuestionText = cell.questionText.text;
     
     cell.respondButton.tag = indexPath.row;
     //[cell.respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchUpInside];
@@ -122,20 +122,18 @@
 
 }
 */
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"Q-A"])
+    if ([segue.identifier isEqualToString:@"showDetail"])
     {
-        UIButton *button = (UIButton *)sender;
-        NSInteger row = button.tag;
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:row inSection:0];
-        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         QuestionCellTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
-        self.questionText = cell.questionText.text;
+        self.selectedQuestionText = cell.questionText.text;
         
-        RespondViewController *rvc = (RespondViewController *)segue.destinationViewController;
+        QuestionDetailViewController *rvc = (QuestionDetailViewController *)segue.destinationViewController;
         
-        rvc.text = self.questionText;
+        rvc.text = self.selectedQuestionText;
         
         NSLog(@"TEXT: %@", rvc.text);
     }

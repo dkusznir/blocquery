@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RespondViewController : UIViewController
+@interface QuestionDetailViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *questionText;
 @property (strong, nonatomic) NSString *text;

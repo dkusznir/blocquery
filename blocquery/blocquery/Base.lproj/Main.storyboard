@@ -146,28 +146,18 @@
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKy-7Y-wCa">
                                             <rect key="frame" x="8" y="8" width="42" height="35"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hti-5N-LdA">
-                                            <rect key="frame" x="8" y="40" width="65" height="30"/>
-                                            <state key="normal" title="Respond">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="Aw1-mN-XMt" kind="show" identifier="Q-A" id="NVq-CU-3cs"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="fKy-7Y-wCa" firstAttribute="height" secondItem="hti-5N-LdA" secondAttribute="height" id="3Sf-J5-DYX"/>
                                         <constraint firstAttribute="centerX" secondItem="fKy-7Y-wCa" secondAttribute="centerX" id="aig-IT-kLm"/>
                                         <constraint firstAttribute="centerY" secondItem="fKy-7Y-wCa" secondAttribute="centerY" id="h80-KB-cwq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="questionText" destination="fKy-7Y-wCa" id="4r2-Pq-Zhl"/>
-                                    <outlet property="respondButton" destination="hti-5N-LdA" id="CpU-Sx-nb9"/>
+                                    <segue destination="Aw1-mN-XMt" kind="show" identifier="showDetail" id="Lh9-BX-dkz"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -189,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="2434" y="176"/>
         </scene>
-        <!--Respond View Controller-->
+        <!--Question Detail View Controller-->
         <scene sceneID="lTW-Mu-F4e">
             <objects>
-                <viewController storyboardIdentifier="RespondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aw1-mN-XMt" customClass="RespondViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RespondVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Aw1-mN-XMt" customClass="QuestionDetailViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e9E-jv-RlN"/>
                         <viewControllerLayoutGuide type="bottom" id="OBO-5v-CZN"/>
@@ -207,7 +197,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question Text Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoC-ci-Hg0">
                                         <rect key="frame" x="0.0" y="0.0" width="191" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -254,7 +244,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Sign Up For BlocQuery!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jos-u1-Vnw">
                                 <rect key="frame" x="31" y="28" width="548" height="70"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" placeholder="Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d0y-tj-meS">

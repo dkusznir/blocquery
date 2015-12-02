@@ -34,7 +34,7 @@
             {
                 self.questions = objects;
                 [PFObject pinAllInBackground:self.questions];
-                NSLog(@"[Datasource.m] Questions count: %lu", self.questions.count);
+                NSLog(@"[Datasource.m] Questions count: %lu", (unsigned long)self.questions.count);
                 
             }
             
