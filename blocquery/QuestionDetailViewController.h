@@ -8,8 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol DidSaveResponseWithText <NSObject>
+
+- (void)respondedWithText:(NSString *)text;
+
+@end
+
 @interface QuestionDetailViewController : UIViewController
 
+@property (nonatomic, weak) id <DidSaveResponseWithText> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *questionText;
 @property (strong, nonatomic) NSString *text;
 

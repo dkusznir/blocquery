@@ -191,6 +191,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vup-Ca-tfT">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </scrollView>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bva-gb-35z">
                                 <rect key="frame" x="20" y="93" width="191" height="21"/>
                                 <subviews>
@@ -202,6 +205,34 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hwY-4o-tUn">
+                                <rect key="frame" x="20" y="122" width="369" height="223"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="dpW-Pu-Ezv">
+                                        <rect key="frame" x="0.0" y="0.0" width="369" height="223"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zyp-gs-KJV">
+                                                <rect key="frame" x="0.0" y="0.0" width="369" height="223"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="pvQ-3z-V40">
+                                                        <rect key="frame" x="0.0" y="0.0" width="369" height="223"/>
+                                                        <subviews>
+                                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cAo-IU-mLm">
+                                                                <rect key="frame" x="0.0" y="0.0" width="369" height="223"/>
+                                                                <color key="backgroundColor" red="0.82445549242424243" green="0.82445549242424243" blue="0.82445549242424243" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <color key="tintColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <attributedString key="attributedText"/>
+                                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
+                                                            </textView>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -209,20 +240,31 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EJW-Ib-6Wu">
+                        <nil key="title"/>
                         <barButtonItem key="leftBarButtonItem" style="plain" id="AmA-eO-5cr">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gs9-ze-4Sb">
                                 <rect key="frame" x="20" y="7" width="133" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="cancelPressed:" destination="Aw1-mN-XMt" eventType="touchUpInside" id="p6R-yS-nGS"/>
                                 </connections>
                             </button>
                         </barButtonItem>
+                        <button key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="GLH-oi-L5j">
+                            <rect key="frame" x="180" y="7" width="240" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Submit!"/>
+                            <connections>
+                                <action selector="submitPressed:" destination="Aw1-mN-XMt" eventType="touchUpInside" id="WBr-Hs-P7C"/>
+                            </connections>
+                        </button>
                     </navigationItem>
                     <connections>
                         <outlet property="cancelButton" destination="gs9-ze-4Sb" id="LIv-UA-r2k"/>
                         <outlet property="questionText" destination="eoC-ci-Hg0" id="31O-FI-Upc"/>
+                        <outlet property="responseText" destination="cAo-IU-mLm" id="ITD-62-Ka4"/>
+                        <outlet property="submitButton" destination="GLH-oi-L5j" id="miR-jN-hmM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dy2-vi-TC7" userLabel="First Responder" sceneMemberID="firstResponder"/>

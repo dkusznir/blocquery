@@ -8,9 +8,11 @@
 
 #import "QuestionDetailViewController.h"
 
-@interface QuestionDetailViewController ()
+@interface QuestionDetailViewController () <UITextFieldDelegate, UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (weak, nonatomic) IBOutlet UITextView *responseText;
 
 @end
 
@@ -33,7 +35,10 @@
 {
     [super viewDidLoad];
     
+    self.responseText.text = @"Enter Response Here.";
+    self.responseText.delegate = self;
     self.questionText.text = self.text;
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,6 +52,40 @@
     NSLog(@"----Cancel Pressed----");
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (IBAction)submitPressed:(id)sender
+{
+    NSLog(@"----Submit Pressed----");
+    
+    if ([self.responseText.text isEqualToString:@""])
+    {
+        //Alert user.
+    }
+    
+    else
+    {
+        NSLog(@"Submit Worked");
+        //[self.delegate respondedWithText:self.responseText.text];
+        [self.navigationController popViewControllerAnimated:YES];
+    }
+    
+}
+
+
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    self.responseText.text = @"";
+}
+
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([self.responseText.text isEqualToString:@""])
+    {
+        self.responseText.text = @"Enter Response Here.";
+    }
+    
+    [self.responseText resignFirstResponder];
 }
 
 /*

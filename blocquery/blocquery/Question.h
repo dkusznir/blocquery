@@ -16,5 +16,7 @@
 @property (nonatomic, strong) NSArray *answers;
 
 - (NSArray *)availableQuestions;
+- (void)saveAnswer;
+//- (void)addResponse:(NSString *)response;
 
 @end

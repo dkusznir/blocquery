@@ -8,15 +8,15 @@
 
 #import "QuestionTableViewController.h"
 #import "LogInViewController.h"
-#import "Datasource.h"
 #import "User.h"
 #import "Question.h"
 #import "QuestionCellTableViewCell.h"
 #import "QuestionDetailViewController.h"
 
-@interface QuestionTableViewController ()
+@interface QuestionTableViewController () <DidSaveResponseWithText>
 
 @property (nonatomic, strong) NSString *selectedQuestionText;
+@property (nonatomic, strong) Question *currentQuestion;
 
 @end
 
@@ -105,6 +105,7 @@
     LogInViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LogInView"];
     [self presentViewController:loginVC animated:YES completion:nil];
 }
+
 /*
 - (UIButton *)respondButton
 {
@@ -129,14 +130,25 @@
     {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         QuestionCellTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+        self.currentQuestion = [[self items] objectAtIndex:indexPath.row];
         self.selectedQuestionText = cell.questionText.text;
         
         QuestionDetailViewController *rvc = (QuestionDetailViewController *)segue.destinationViewController;
+        rvc.delegate = self;
         
         rvc.text = self.selectedQuestionText;
         
         NSLog(@"TEXT: %@", rvc.text);
     }
+
+}
+
+- (void)respondedWithText:(NSString *)text
+{
+    NSMutableArray *array = [self.currentQuestion.answers mutableCopy];
+    [array addObject:text];
+        
+    [self.currentQuestion saveAnswer];
 
 }
 

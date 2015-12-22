@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface Datasource : NSObject
 
 + (instancetype)sharedInstance;
 
 @property (nonatomic, strong) NSArray *questions;
+
+- (void)saveAnswer:(PFObject *)object;
 
 @end

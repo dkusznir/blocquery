@@ -19,6 +19,7 @@
     {
         self.user = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(user))];
         self.text = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(text))];
+        self.answers = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(answers))];
     }
     
     return self;
@@ -30,5 +31,24 @@
     
     return questions;
 }
+
+- (void)saveAnswer
+{
+    PFObject *object = (PFObject *)self;
+    [[Datasource sharedInstance] saveAnswer:object];
+}
+
+/*
+- (void)addResponse:(NSString *)response
+{
+    NSMutableArray *array = [self.answers mutableCopy];
+    [array addObject:response];
+    [[Datasource sharedInstance] saveAnswer];
+    
+    self.answers = array;
+
+}
+*/
+
 
 @end

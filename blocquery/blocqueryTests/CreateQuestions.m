@@ -88,14 +88,16 @@
     }];
 }
 
-- (void)testQuestion4
+- (void)testQuestion6
 {
-    PFObject *question4 = [PFObject objectWithClassName:@"Question"];
+    PFObject *question6 = [PFObject objectWithClassName:@"Question"];
     
-    question4[@"text"] = @"hello world";
-    question4[@"user"] = @"johnny coder";
+    question6[@"text"] = @"testing answers again";
+    question6[@"user"] = @"johnny coder";
+    //NSMutableArray *ma = [NSMutableArray arrayWithObjects:@"answer 1", @"answer 2", @"12345", @"hello this is a test", nil];
+    //question6[@"answers"] = [NSArray arrayWithObjects:@"answer 1", @"answer 2", @"12345", @"hello this is a test", nil];
     
-    [question4 saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+    [question6 saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
         if (success)
         {
             NSLog(@"Success");
@@ -108,4 +110,33 @@
     }];
     
 }
+
+- (void)testQuestion5
+{
+    PFObject *question5 = [PFObject objectWithClassName:@"Question"];
+    
+    question5[@"text"] = @"testing answers";
+    question5[@"user"] = @"johnny coder";
+    //NSMutableArray *ma = [NSMutableArray arrayWithObjects:@"answer 1", @"answer 2", @"12345", @"hello this is a test", nil];
+    question5[@"answers"] = [NSArray arrayWithObjects:@"answer 1", @"answer 2", @"12345", @"hello this is a test", nil];
+    
+    [question5 saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+        if (success)
+        {
+            NSLog(@"Success");
+        }
+        
+        else
+        {
+            NSLog(@"%@", error);
+        }
+    }];
+    
+}
+
+- (void)testQuestion7
+{
+    
+}
+
 @end

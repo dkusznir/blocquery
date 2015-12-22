@@ -7,7 +7,6 @@
 //
 
 #import "Datasource.h"
-#import <Parse/Parse.h>
 #import "Question.h"
 
 @implementation Datasource 
@@ -65,6 +64,23 @@
     }
 
     return self;
+}
+
+- (void)saveAnswer:(PFObject *)object
+{
+    
+    [object saveInBackgroundWithBlock:^(BOOL success, NSError *error) {
+        if (success)
+        {
+            NSLog(@"Success");
+        }
+        
+        else
+        {
+            NSLog(@"%@", error);
+        }
+    }];
+
 }
 
 @end
