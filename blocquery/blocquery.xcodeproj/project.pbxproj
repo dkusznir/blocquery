@@ -27,9 +27,16 @@
 		AA2037771B4EE165008E8786 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037761B4EE165008E8786 /* SystemConfiguration.framework */; };
 		AA2037791B4EE16D008E8786 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037781B4EE16D008E8786 /* libz.dylib */; };
 		AA20377B1B4EE176008E8786 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA20377A1B4EE176008E8786 /* libsqlite3.dylib */; };
+		AA2873241BCD66B20017BAFD /* QuestionDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA2873231BCD66B20017BAFD /* QuestionDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
 		AAE808651B5976FB00CBF411 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808641B5976FB00CBF411 /* User.m */; };
 		AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8086A1B59801800CBF411 /* LogInViewController.m */; };
 		AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8086D1B59A80300CBF411 /* SignUpViewController.m */; };
+		AAE808711B5D9B1100CBF411 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */; };
+		AAE808771B5DC3FC00CBF411 /* Datasource.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808761B5DC3FC00CBF411 /* Datasource.m */; };
+		AAE8087C1B6BE78500CBF411 /* CreateQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */; };
+		AAE8087E1B6BF51900CBF411 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037621B4EE0E1008E8786 /* Parse.framework */; };
+		AAED7DFA1B7CE45700FE355C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED7DF91B7CE45700FE355C /* Question.m */; };
+		AAED7DFD1B9F7AC200FE355C /* QuestionCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED7DFC1B9F7AC200FE355C /* QuestionCellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,12 +76,23 @@
 		AA2037761B4EE165008E8786 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		AA2037781B4EE16D008E8786 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		AA20377A1B4EE176008E8786 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AA2873221BCD66B20017BAFD /* QuestionDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionDetailViewController.h; path = ../QuestionDetailViewController.h; sourceTree = "<group>"; };
+		AA2873231BCD66B20017BAFD /* QuestionDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionDetailViewController.m; path = ../QuestionDetailViewController.m; sourceTree = "<group>"; };
 		AAE808631B5976FB00CBF411 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = ../User.h; sourceTree = "<group>"; };
 		AAE808641B5976FB00CBF411 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = ../User.m; sourceTree = "<group>"; };
 		AAE808691B59801800CBF411 /* LogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogInViewController.h; sourceTree = "<group>"; };
 		AAE8086A1B59801800CBF411 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		AAE8086C1B59A80300CBF411 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		AAE8086D1B59A80300CBF411 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		AAE8086F1B5D9B1100CBF411 /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
+		AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
+		AAE808751B5DC3FC00CBF411 /* Datasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datasource.h; sourceTree = "<group>"; };
+		AAE808761B5DC3FC00CBF411 /* Datasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datasource.m; sourceTree = "<group>"; };
+		AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQuestions.m; sourceTree = "<group>"; };
+		AAED7DF81B7CE45700FE355C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		AAED7DF91B7CE45700FE355C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		AAED7DFB1B9F7AC200FE355C /* QuestionCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionCellTableViewCell.h; sourceTree = "<group>"; };
+		AAED7DFC1B9F7AC200FE355C /* QuestionCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionCellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE8087E1B6BF51900CBF411 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,12 +153,22 @@
 				AA2037401B4EE049008E8786 /* AppDelegate.m */,
 				AA2037421B4EE049008E8786 /* ViewController.h */,
 				AA2037431B4EE049008E8786 /* ViewController.m */,
+				AA2873221BCD66B20017BAFD /* QuestionDetailViewController.h */,
+				AA2873231BCD66B20017BAFD /* QuestionDetailViewController.m */,
 				AAE808691B59801800CBF411 /* LogInViewController.h */,
 				AAE8086A1B59801800CBF411 /* LogInViewController.m */,
+				AAE8086F1B5D9B1100CBF411 /* QuestionTableViewController.h */,
+				AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */,
+				AAED7DFB1B9F7AC200FE355C /* QuestionCellTableViewCell.h */,
+				AAED7DFC1B9F7AC200FE355C /* QuestionCellTableViewCell.m */,
 				AAE8086C1B59A80300CBF411 /* SignUpViewController.h */,
 				AAE8086D1B59A80300CBF411 /* SignUpViewController.m */,
 				AAE808631B5976FB00CBF411 /* User.h */,
 				AAE808641B5976FB00CBF411 /* User.m */,
+				AAE808751B5DC3FC00CBF411 /* Datasource.h */,
+				AAE808761B5DC3FC00CBF411 /* Datasource.m */,
+				AAED7DF81B7CE45700FE355C /* Question.h */,
+				AAED7DF91B7CE45700FE355C /* Question.m */,
 				AA2037451B4EE049008E8786 /* Main.storyboard */,
 				AA2037481B4EE049008E8786 /* Images.xcassets */,
 				AA20374A1B4EE049008E8786 /* LaunchScreen.xib */,
@@ -161,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2037571B4EE049008E8786 /* blocqueryTests.m */,
+				AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */,
 				AA2037551B4EE049008E8786 /* Supporting Files */,
 			);
 			path = blocqueryTests;
@@ -238,7 +268,7 @@
 		AA2037301B4EE049008E8786 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = dkusznir;
 				TargetAttributes = {
 					AA2037371B4EE049008E8786 = {
@@ -296,8 +326,13 @@
 			files = (
 				AAE808651B5976FB00CBF411 /* User.m in Sources */,
 				AA2037441B4EE049008E8786 /* ViewController.m in Sources */,
+				AAE808771B5DC3FC00CBF411 /* Datasource.m in Sources */,
 				AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */,
+				AAE808711B5D9B1100CBF411 /* QuestionTableViewController.m in Sources */,
+				AA2873241BCD66B20017BAFD /* QuestionDetailViewController.m in Sources */,
+				AAED7DFD1B9F7AC200FE355C /* QuestionCellTableViewCell.m in Sources */,
 				AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */,
+				AAED7DFA1B7CE45700FE355C /* Question.m in Sources */,
 				AA2037411B4EE049008E8786 /* AppDelegate.m in Sources */,
 				AA20373E1B4EE049008E8786 /* main.m in Sources */,
 			);
@@ -308,6 +343,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2037581B4EE049008E8786 /* blocqueryTests.m in Sources */,
+				AAE8087C1B6BE78500CBF411 /* CreateQuestions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +398,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -377,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -415,7 +452,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -433,6 +470,7 @@
 				);
 				INFOPLIST_FILE = blocquery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dkusznir.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -447,6 +485,7 @@
 				);
 				INFOPLIST_FILE = blocquery/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dkusznir.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -458,6 +497,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -465,6 +505,7 @@
 				);
 				INFOPLIST_FILE = blocqueryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dkusznir.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blocquery.app/blocquery";
 			};
@@ -477,9 +518,11 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = blocqueryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dkusznir.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/blocquery.app/blocquery";
 			};
