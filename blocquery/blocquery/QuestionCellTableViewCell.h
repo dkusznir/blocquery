@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *questionText;
 @property (weak, nonatomic) IBOutlet UIButton *respondButton;
 @property (weak, nonatomic) IBOutlet UILabel *numberOfResponses;
+@property (weak, nonatomic) IBOutlet UILabel *hotQuestion;
 
 @end

@@ -14,6 +14,7 @@
 @property (nonatomic, strong) NSString *user;
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSArray *answers;
+@property (nonatomic, assign) NSInteger views;
 
 - (NSArray *)availableQuestions;
 - (void)saveAnswer;

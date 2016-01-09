@@ -76,6 +76,19 @@
     NSArray *responses = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"answers"];
     cell.numberOfResponses.text = [NSString stringWithFormat:@"Responses: %d", responses.count];
     
+    NSInteger numberOfViews = (NSInteger)[[[self items] objectAtIndex:indexPath.row] valueForKey:@"views"];
+    
+    if (numberOfViews > 0)
+    {
+        cell.hotQuestion.hidden = NO;
+        cell.hotQuestion.text = @"HOT";
+    }
+    
+    else
+    {
+        cell.hotQuestion.hidden = YES;
+    }
+    
     cell.respondButton.tag = indexPath.row;
     //[cell.respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchUpInside];
     
