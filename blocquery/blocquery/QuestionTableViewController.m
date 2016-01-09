@@ -73,6 +73,9 @@
     cell.questionText.text = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"text"];
     self.selectedQuestionText = cell.questionText.text;
     
+    NSArray *responses = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"answers"];
+    cell.numberOfResponses.text = [NSString stringWithFormat:@"Responses: %d", responses.count];
+    
     cell.respondButton.tag = indexPath.row;
     //[cell.respondButton addTarget:self action:@selector(respondPressed:) forControlEvents:UIControlEventTouchUpInside];
     

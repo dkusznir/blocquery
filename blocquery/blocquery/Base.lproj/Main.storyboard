@@ -149,6 +149,12 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pG-ZJ-Z9m">
+                                            <rect key="frame" x="8" y="49" width="215" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="centerX" secondItem="fKy-7Y-wCa" secondAttribute="centerX" id="aig-IT-kLm"/>
@@ -156,6 +162,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="numberOfResponses" destination="8pG-ZJ-Z9m" id="MYK-ju-3Z4"/>
                                     <outlet property="questionText" destination="fKy-7Y-wCa" id="4r2-Pq-Zhl"/>
                                     <segue destination="Aw1-mN-XMt" kind="show" identifier="showDetail" id="Lh9-BX-dkz"/>
                                 </connections>
