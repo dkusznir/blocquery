@@ -8,11 +8,12 @@
 
 #import "QuestionDetailViewController.h"
 
-@interface QuestionDetailViewController () <UITextFieldDelegate, UITextViewDelegate>
+@interface QuestionDetailViewController () <UITextFieldDelegate, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UIButton *cancelButton;
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
 @property (weak, nonatomic) IBOutlet UITextView *responseText;
+@property (weak, nonatomic) IBOutlet UITableView *responsesView;
 
 @end
 
@@ -45,6 +46,29 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.responsesView.delegate = self;
+    self.responsesView.dataSource = self;
+    [super viewWillAppear:YES];
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.responsesView dequeueReusableCellWithIdentifier:@"Response"];
+    return cell;
 }
 
 - (IBAction)cancelPressed:(id)sender
@@ -87,6 +111,8 @@
     
     [self.responseText resignFirstResponder];
 }
+
+
 
 /*
 #pragma mark - Navigation

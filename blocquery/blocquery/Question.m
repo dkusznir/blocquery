@@ -20,6 +20,7 @@
         self.user = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(user))];
         self.text = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(text))];
         self.answers = [[self availableQuestions] valueForKey:NSStringFromSelector(@selector(answers))];
+        self.views = (NSInteger)[[self availableQuestions] valueForKey:NSStringFromSelector(@selector(views))];
     }
     
     return self;
