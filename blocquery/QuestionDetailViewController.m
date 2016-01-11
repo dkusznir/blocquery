@@ -7,6 +7,7 @@
 //
 
 #import "QuestionDetailViewController.h"
+#import "QuestionDetailTableViewCell.h"
 
 @interface QuestionDetailViewController () <UITextFieldDelegate, UITextViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
@@ -62,12 +63,26 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 1;
+    if (self.questionAnswers > 0)
+    {
+        return self.questionAnswers.count;
+    }
+    
+    else
+    {
+        return 0;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.responsesView dequeueReusableCellWithIdentifier:@"Response"];
+    QuestionDetailTableViewCell *cell = (QuestionDetailTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"Response" forIndexPath:indexPath];
+    
+    if (self.questionAnswers > 0)
+    {
+        cell.answersToQuestion.text = [self.questionAnswers objectAtIndex:indexPath.row];
+    }
+    
     return cell;
 }
 

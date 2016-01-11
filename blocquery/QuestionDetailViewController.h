@@ -19,6 +19,7 @@
 @property (nonatomic, weak) id <DidSaveResponseWithText> delegate;
 @property (weak, nonatomic) IBOutlet UILabel *questionText;
 @property (strong, nonatomic) NSString *text;
+@property (strong, nonatomic) NSArray *questionAnswers;
 
 //- (id)initWithQuestion:(NSString *)question;
 

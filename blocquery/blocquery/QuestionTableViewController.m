@@ -16,6 +16,7 @@
 @interface QuestionTableViewController () <DidSaveResponseWithText>
 
 @property (nonatomic, strong) NSString *selectedQuestionText;
+@property (nonatomic, strong) NSArray *selectedQuestionAnswers;
 @property (nonatomic, strong) Question *currentQuestion;
 
 @end
@@ -148,11 +149,13 @@
         QuestionCellTableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
         self.currentQuestion = [[self items] objectAtIndex:indexPath.row];
         self.selectedQuestionText = cell.questionText.text;
+        self.selectedQuestionAnswers = [[[self items] objectAtIndex:indexPath.row] valueForKey:@"answers"];
         
         QuestionDetailViewController *rvc = (QuestionDetailViewController *)segue.destinationViewController;
         rvc.delegate = self;
         
         rvc.text = self.selectedQuestionText;
+        rvc.questionAnswers = self.selectedQuestionAnswers;
         
         NSLog(@"TEXT: %@", rvc.text);
     }
