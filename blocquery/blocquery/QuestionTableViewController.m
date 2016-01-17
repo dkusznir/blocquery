@@ -105,6 +105,14 @@
 
 - (IBAction)logOut:(id)sender
 {
+    [self logOut];
+
+    LogInViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LogInView"];
+    [self presentViewController:loginVC animated:YES completion:nil];
+}
+
+- (void)logOut
+{
     [User logOutInBackgroundWithBlock:^(NSError *error) {
         if (error)
         {
@@ -118,9 +126,6 @@
     }];
     
     [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"New User"];
-
-    LogInViewController *loginVC = [self.storyboard instantiateViewControllerWithIdentifier:@"LogInView"];
-    [self presentViewController:loginVC animated:YES completion:nil];
 }
 
 /*

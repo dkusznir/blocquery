@@ -10,4 +10,6 @@
 
 @interface QuestionTableViewController : UITableViewController
 
+- (void)logOut;
+
 @end
