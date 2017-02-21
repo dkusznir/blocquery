@@ -8,6 +8,8 @@
 
 #import "LogInViewController.h"
 #import "SignUpViewController.h"
+#import "ViewController.h"
+#import "QuestionTableViewController.h"
 #import "User.h"
 
 @interface LogInViewController ()
@@ -50,6 +52,11 @@
         [PFUser logInWithUsernameInBackground:username password:password block:^(PFUser *user, NSError *error) {
             if (user)
             {
+                //ViewController *viewVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MainView"];
+                [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"New User"];
+                QuestionTableViewController *questionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Table"];
+                UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:questionVC];
+                [self presentViewController:navVC animated:YES completion:nil];
                 NSLog(@"User found!");
             }
             

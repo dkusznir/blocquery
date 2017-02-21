@@ -7,7 +7,7 @@
 //
 
 #import "SignUpViewController.h"
-#import "ViewController.h"
+#import "QuestionTableViewController.h"
 #import "User.h"
 
 @interface SignUpViewController ()
@@ -64,8 +64,9 @@
              }
         }];
         
-        ViewController *viewVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MainView"];
-        [self presentViewController:viewVC animated:YES completion:nil];
+        QuestionTableViewController *questionVC = [self.storyboard instantiateViewControllerWithIdentifier:@"Table"];
+        UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:questionVC];
+        [self presentViewController:navVC animated:YES completion:nil];
     }
     
     else
