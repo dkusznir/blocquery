@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "User.h"
+#import "QuestionTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,7 +25,20 @@
     [User registerSubclass];
     [Parse setApplicationId:@"aszkUGUw9BlxubPljQ2MX0P44oAaAsatwjPLnFIP" clientKey:@"oVPuC7Ae1bqceiY6j6TiVRKdP3fXL1CMuKo8DaLa"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    if (![User currentUser])
+    {
+        NSLog(@"NEW USER");
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"New User"];
         
+    }
+    
+    else
+    {
+        NSLog(@"EXISTING USER");
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"New User"];
+    }
+    
     return YES;
 }
 

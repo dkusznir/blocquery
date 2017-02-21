@@ -30,6 +30,11 @@
 		AAE808651B5976FB00CBF411 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808641B5976FB00CBF411 /* User.m */; };
 		AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8086A1B59801800CBF411 /* LogInViewController.m */; };
 		AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8086D1B59A80300CBF411 /* SignUpViewController.m */; };
+		AAE808711B5D9B1100CBF411 /* QuestionTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */; };
+		AAE808771B5DC3FC00CBF411 /* Datasource.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE808761B5DC3FC00CBF411 /* Datasource.m */; };
+		AAE8087C1B6BE78500CBF411 /* CreateQuestions.m in Sources */ = {isa = PBXBuildFile; fileRef = AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */; };
+		AAE8087E1B6BF51900CBF411 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA2037621B4EE0E1008E8786 /* Parse.framework */; };
+		AAED7DFA1B7CE45700FE355C /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = AAED7DF91B7CE45700FE355C /* Question.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,13 @@
 		AAE8086A1B59801800CBF411 /* LogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogInViewController.m; sourceTree = "<group>"; };
 		AAE8086C1B59A80300CBF411 /* SignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
 		AAE8086D1B59A80300CBF411 /* SignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		AAE8086F1B5D9B1100CBF411 /* QuestionTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewController.h; sourceTree = "<group>"; };
+		AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewController.m; sourceTree = "<group>"; };
+		AAE808751B5DC3FC00CBF411 /* Datasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Datasource.h; sourceTree = "<group>"; };
+		AAE808761B5DC3FC00CBF411 /* Datasource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Datasource.m; sourceTree = "<group>"; };
+		AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateQuestions.m; sourceTree = "<group>"; };
+		AAED7DF81B7CE45700FE355C /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		AAED7DF91B7CE45700FE355C /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AAE8087E1B6BF51900CBF411 /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,10 +149,16 @@
 				AA2037431B4EE049008E8786 /* ViewController.m */,
 				AAE808691B59801800CBF411 /* LogInViewController.h */,
 				AAE8086A1B59801800CBF411 /* LogInViewController.m */,
+				AAE8086F1B5D9B1100CBF411 /* QuestionTableViewController.h */,
+				AAE808701B5D9B1100CBF411 /* QuestionTableViewController.m */,
 				AAE8086C1B59A80300CBF411 /* SignUpViewController.h */,
 				AAE8086D1B59A80300CBF411 /* SignUpViewController.m */,
 				AAE808631B5976FB00CBF411 /* User.h */,
 				AAE808641B5976FB00CBF411 /* User.m */,
+				AAE808751B5DC3FC00CBF411 /* Datasource.h */,
+				AAE808761B5DC3FC00CBF411 /* Datasource.m */,
+				AAED7DF81B7CE45700FE355C /* Question.h */,
+				AAED7DF91B7CE45700FE355C /* Question.m */,
 				AA2037451B4EE049008E8786 /* Main.storyboard */,
 				AA2037481B4EE049008E8786 /* Images.xcassets */,
 				AA20374A1B4EE049008E8786 /* LaunchScreen.xib */,
@@ -161,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				AA2037571B4EE049008E8786 /* blocqueryTests.m */,
+				AAE8087B1B6BE78500CBF411 /* CreateQuestions.m */,
 				AA2037551B4EE049008E8786 /* Supporting Files */,
 			);
 			path = blocqueryTests;
@@ -296,8 +316,11 @@
 			files = (
 				AAE808651B5976FB00CBF411 /* User.m in Sources */,
 				AA2037441B4EE049008E8786 /* ViewController.m in Sources */,
+				AAE808771B5DC3FC00CBF411 /* Datasource.m in Sources */,
 				AAE8086E1B59A80300CBF411 /* SignUpViewController.m in Sources */,
+				AAE808711B5D9B1100CBF411 /* QuestionTableViewController.m in Sources */,
 				AAE8086B1B59801800CBF411 /* LogInViewController.m in Sources */,
+				AAED7DFA1B7CE45700FE355C /* Question.m in Sources */,
 				AA2037411B4EE049008E8786 /* AppDelegate.m in Sources */,
 				AA20373E1B4EE049008E8786 /* main.m in Sources */,
 			);
@@ -308,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA2037581B4EE049008E8786 /* blocqueryTests.m in Sources */,
+				AAE8087C1B6BE78500CBF411 /* CreateQuestions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -458,6 +482,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -477,6 +502,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = blocqueryTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
